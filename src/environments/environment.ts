@@ -15,7 +15,7 @@ export const environment = {
     {
       type: LOGIN_TYPE.accessKey,
       name: 'AWS Access Key',
-      region: 'ap-northeast-1',
+      region: 'eu-west-1',
     },
   ],
 };
