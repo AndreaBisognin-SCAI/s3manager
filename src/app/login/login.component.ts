@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { AuthService } from '../auth/auth.service';
-import { LOCAL_KEY_LOGIN_INDEX, LOCAL_KEY_LOGIN_TYPE, LOCAL_KEY_REGION, LOGIN_TYPE } from '../constant';
+import { LOCAL_KEY_LOGIN_INDEX, LOCAL_KEY_LOGIN_TYPE, LOCAL_KEY_REGION, LOGIN_TYPE, LOCAL_KEY_BUCKETS } from '../constant';
 
 @Component({
   selector: 'app-login',
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
     localStorage[LOCAL_KEY_LOGIN_INDEX] = this.form.type;
     localStorage[LOCAL_KEY_LOGIN_TYPE] = login.type;
     localStorage[LOCAL_KEY_REGION] = login.region;
+    localStorage[LOCAL_KEY_BUCKETS] = environment.buckets;
 
     this.auth.signIn(this.form.username, this.form.password, login).subscribe(
       result => {

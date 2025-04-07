@@ -1,7 +1,7 @@
 import { LOGIN_TYPE } from 'src/app/constant';
 
 export const environment = {
-  production: false,
+  production: true,
   title: 'S3 Manager',
   logins: [
     {
@@ -18,4 +18,5 @@ export const environment = {
       region: 'eu-west-1',
     },
   ],
+  buckets: ['villa-maria-demo-20250407,,']
 };
