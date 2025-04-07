@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     localStorage[LOCAL_KEY_LOGIN_INDEX] = this.form.type;
     localStorage[LOCAL_KEY_LOGIN_TYPE] = login.type;
     localStorage[LOCAL_KEY_REGION] = login.region;
-    localStorage[LOCAL_KEY_BUCKETS] = environment.buckets;
+    localStorage[LOCAL_KEY_BUCKETS] = JSON.stringify(environment.buckets);
 
     this.auth.signIn(this.form.username, this.form.password, login).subscribe(
       result => {
